@@ -1,27 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-
-  const loginBtn = document.getElementById("loginBtn");
-  const registerBtn = document.getElementById("registerBtn");
-  const userNameDisplay = document.getElementById("userNameDisplay");
-  const logoutBtn = document.getElementById("logoutBtn");
-
+  let authSection = document.querySelector(".auth-buttons");
+  // Kiểm tra thông tin đăng nhập hiện tại
+  let currentUser = localStorage.getItem("currentUser");
   if (currentUser) {
-    // Ẩn đăng nhập/đăng ký
-    if (loginBtn) loginBtn.style.display = "none";
-    if (registerBtn) registerBtn.style.display = "none";
-
-    // Hiện tên người dùng
-    if (userNameDisplay) {
-      userNameDisplay.textContent = "Xin chào, " + currentUser.fullname;
-      userNameDisplay.style.display = "inline-block";
-    }
-
-    // Hiện nút đăng xuất (nếu có)
-    if (logoutBtn) logoutBtn.style.display = "inline-block";
+    currentUser = JSON.parse(currentUser);
+    authSection.innerHTML =
+      '<a href="../account/account.html" class="user-link">' +
+      currentUser.fullname +
+      "</a>";
   } else {
-    // Nếu chưa đăng nhập, ẩn tên và nút đăng xuất
-    if (userNameDisplay) userNameDisplay.style.display = "none";
-    if (logoutBtn) logoutBtn.style.display = "none";
+    authSection.innerHTML =
+      '<a href="login.html">Đăng nhập</a> <a href="register.html">Đăng ký</a>';
   }
 });

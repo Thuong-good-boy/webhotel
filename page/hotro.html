@@ -10,7 +10,7 @@
 <body>
 <header class="header">
    <div class="container">
-      <div class="logo"><a href="index.html">Hotel Family</a></div>
+      <div class="logo"><a href="../trangchu/index.html">Hotel Family</a></div>
       <nav class="nav">
          <ul class="nav-links">
             <li><a href="phong.html">Phòng</a></li>
@@ -20,7 +20,8 @@
          </ul>
       </nav>
       <div class="auth-buttons">
-         <a href="login.html">Đăng nhập</a> <a href="register.html">Đăng ký</a>
+         <a href="../accounts/login.html">Đăng nhập</a> <a href="../accounts/register.html">Đăng ký</a>
+         <span id="userNameDisplay" style="display: none; font-weight: bold;"></span>
       </div>
    </div>
 </header>
@@ -51,7 +52,7 @@
       </div>
       <div class="faq">
          <h4>Q: Tôi có thể hủy đặt phòng được không?</h4>
-         <p>A: Có, bạn có thể hủy đặt phòng theo chính sách của khách sạn.</p>
+         <p>A: Có, bạn có thể hủy đặt phòng khi liên hệ với chúng tôi qua hotline</p>
       </div>
       <!-- Thêm các câu hỏi khác nếu cần -->
    </section>
@@ -59,16 +60,17 @@
 
 <footer class="footer">
    <div class="container">
-      <p>&copy; 2025 Hotel Family. All rights reserved.</p>
+      <p>&copy; 2025 Hotel Family.Hotline : 0123456789</p>
    </div>
 </footer>
 
-<script src="auth.js">
+<script >
    document.getElementById('support-form').addEventListener('submit', function(e) {
       e.preventDefault();
       alert('Yêu cầu của bạn đã được gửi. Chúng tôi sẽ liên hệ lại sớm nhất.');
       document.getElementById('support-form').reset();
    });
 </script>
+<script src="../auth.js"></script>
 </body>
 </html>

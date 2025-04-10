@@ -14,16 +14,18 @@
       <div class="logo">Hotel Family</div>
       <nav class="nav">
         <ul class="nav-links">
-          <li><a href="phong.html">Phòng</a></li>
-          <li><a href="combo.html">Combo Du Lịch</a></li>
-          <li><a href="khuyenmai.html">Khuyến Mãi</a></li>
-          <li><a href="hotro.html">Hỗ Trợ</a></li>
+          <li><a href="../page/phong.html">Phòng</a></li>
+          <li><a href="../page/combo.html">Combo Du Lịch</a></li>
+          <li><a href="../page/khuyenmai.html">Khuyến Mãi</a></li>
+          <li><a href="../page/hotro.html">Hỗ Trợ</a></li>
+
         </ul>
       </nav>
       <div class="auth-buttons">
-        <a href="login.html">Đăng nhập</a>
-        <a href="register.html">Đăng ký</a>
-        
+        <a href="../accounts/login.html">Đăng nhập</a>
+        <a href="../accounts/register.html">Đăng ký</a>
+        <span id="userNameDisplay" style="display: none; font-weight: bold;"></span>
+      
       </div>
     </div>
   </header>
@@ -38,7 +40,7 @@
   <!-- Danh sách khách sạn nổi bật -->
   <section class="hotels">
     <div class="container">
-      <h3>Phòng có view nổi bật</h3>
+      <h3>Ở hotel Family có gì</h3>
       <div class="hotel-list">
         <div class="hotel-card">
           <img src="https://cdn-www.vinid.net/186cf1c7-khach-san-song-han-da-nang-1.jpg" alt="Hotel 1">
@@ -68,23 +70,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Hotel Family.</p>
+      <p>&copy; 2025 Hotel Family.Hotline : 0123456789</p>
     </div>
   </footer>
-  <script >
-     document.addEventListener('DOMContentLoaded', function() {
-      let authSection = document.querySelector('.auth-buttons');
-      // Kiểm tra thông tin đăng nhập hiện tại
-      let currentUser = localStorage.getItem('currentUser');
-      
-      if(currentUser) {
-        currentUser = JSON.parse(currentUser);
-        authSection.innerHTML = '<a href="account.html" class="user-link">' + currentUser.fullname + '</a>';
-      } else {
-        authSection.innerHTML = '<a href="login.html">Đăng nhập</a> <a href="register.html">Đăng ký</a>';
-      }
-    });
-  </script>
+  <script src="../auth.js"></script>
   
 </body>
 </html>

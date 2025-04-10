@@ -36,7 +36,7 @@
       if (!currentUser) {
         localStorage.removeItem("currentUser");
         alert("Bạn đã đăng xuất thành công!");
-        window.location.href = 'login.html';
+        window.location.href = '../trangchu/index.html';
         return;
       }
 
@@ -53,7 +53,7 @@
       document.getElementById('logout').addEventListener('click', function() {
         // Xóa thông tin đăng nhập hiện tại
         localStorage.removeItem('currentUser');
-        window.location.href = 'index.html';
+        window.location.href = '../trangchu/index.html';
       });
     });
   </script>
