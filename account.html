@@ -34,6 +34,8 @@
     document.addEventListener('DOMContentLoaded', function() {
       let currentUser = localStorage.getItem('currentUser');
       if (!currentUser) {
+        localStorage.removeItem("currentUser");
+        alert("Bạn đã đăng xuất thành công!");
         window.location.href = 'login.html';
         return;
       }
