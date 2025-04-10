@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (currentUser) {
     currentUser = JSON.parse(currentUser);
     authSection.innerHTML =
-      '<a href="../account/account.html" class="user-link">' +
+      '<a href="../accounts/account.html" class="user-link">' +
       currentUser.fullname +
       "</a>";
   } else {
     authSection.innerHTML =
-      '<a href="login.html">Đăng nhập</a> <a href="register.html">Đăng ký</a>';
+      '<a href="../accounts/login.html">Đăng nhập</a> <a href="../accounts/register.html">Đăng ký</a>';
   }
 });
